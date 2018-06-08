@@ -33,15 +33,15 @@ public class Navigator extends Application {
 
         RadioButton radioButtonDraw = new RadioButton("Draw");
         radioButtonDraw.setToggleGroup(radioButtonGroup);
-        radioButtonDraw.setSelected(true);
+        radioButtonDraw.setSelected(false);
 
         RadioButton radioButtonNavigator = new RadioButton("Navigator");
         radioButtonNavigator.setToggleGroup(radioButtonGroup);
-        radioButtonNavigator.setSelected(false);
+        radioButtonNavigator.setSelected(true);
 
         radioButtonGroupArea.getChildren().add(radioButtonDraw);
         radioButtonGroupArea.getChildren().add(radioButtonNavigator);
-
+                
         // Button
         Button writeFileButton = new Button("Write file");
 
