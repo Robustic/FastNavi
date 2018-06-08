@@ -61,7 +61,6 @@ public class Navigator extends Application {
         layout.setRight(radioButtonAndButtonArea);
 
         writeFileButton.setOnAction((event) -> {
-            System.out.println("Painettu!");
             navigatorInterface.writeFile();
         });
 
@@ -90,9 +89,6 @@ public class Navigator extends Application {
                 navigatorInterface.drawLocations();
                 navigatorInterface.defineNeighbors();
                 navigatorInterface.drawFastestPath();
-
-                System.out.println(clickedScreenX);
-                System.out.println(clickedScreenY);
             }
         });
 
@@ -107,8 +103,6 @@ public class Navigator extends Application {
      */
     public static void main(String[] args) {
         launch(Navigator.class);
-
-        // TODO code application logic here
     }
 
 }

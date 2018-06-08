@@ -73,13 +73,15 @@ public class NavigatorInterface {
             Location start = this.roadNet.getStart();
             Location end = this.roadNet.getEnd();
             Path fastestRoute = this.roadNet.fastestRoute(start, end);
-            List<Stage> stages = this.roadNet.pathToStages(fastestRoute);
-            this.gc.setLineWidth(5);
-            this.gc.setStroke(Color.CORNFLOWERBLUE);
-            this.drawObjects.drawLines(stages);
-            this.gc.setFill(Color.CORNFLOWERBLUE);
-            this.drawObjects.drawLocations(fastestRoute.getPath());
-            drawStartAndEndLocations();
+            if (fastestRoute != null) {
+                List<Stage> stages = this.roadNet.pathToStages(fastestRoute);
+                this.gc.setLineWidth(5);
+                this.gc.setStroke(Color.CORNFLOWERBLUE);
+                this.drawObjects.drawLines(stages);
+                this.gc.setFill(Color.CORNFLOWERBLUE);
+                this.drawObjects.drawLocations(fastestRoute.getPath());
+                drawStartAndEndLocations();
+            }
         }
     }
 
